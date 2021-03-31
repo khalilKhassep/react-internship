@@ -1,0 +1,15 @@
+{
+    "users" : [
+        {
+            "id" : "user-01",
+            "name" : "khalil",
+            "password" : "1qazXSW@12"
+        },
+        {
+            "name" : "Lenove"
+        }
+    ],
+    "expo": {
+        "description": ""
+    }
+}
