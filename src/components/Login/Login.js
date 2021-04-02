@@ -36,7 +36,7 @@ const Login = () => {
             if (request.ok) {
                 const response = await request.json();
                 validateUser(response[0]) ? setMessage(`Welcome ${response[0].name}`) : console.log("wrong info");
-                setCredential({...credential,username: '',password: ''})
+                setCredential({...credential, username: '', password: ''})
 
             }
 
@@ -82,11 +82,11 @@ const Login = () => {
             <form className={'form'}>
                 <TextField onChange={event => {
                     userNameHandler(event.target.value)
-                     }} mb={5} required label={'required'} type={'text'}  display={'block'}
+                }} mb={5} required label={'required'} type={'text'} display={'block'}
                            fullWidth placeholder={credential.username}/>
                 <TextField onChange={(event) => {
                     passwordHandler(event.target.value)
-                }} required label={'reauired'} type={'password'}  display={'block'}
+                }} required label={'reauired'} type={'password'} display={'block'}
                            fullWidth placeholder={credential.password}/>
                 <Box>
                     <span>{valied ? "Password matches" : 'Password dont match'}</span>
@@ -97,7 +97,6 @@ const Login = () => {
         </div>
 
     )
-
 
 
 }
