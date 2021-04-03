@@ -20,7 +20,7 @@ export async function getCountryData(country) {
          });
          if(request.ok){
              const response = await request.json();
-             console.log(response)
+             
              return Promise.resolve(response.response[0])
          }else{
              return Promise.reject(request)
@@ -40,6 +40,7 @@ export function convertArrayToArrOfObject(arr, _2d = true) { // create dynmic ke
 
     }
 }
+
 
 
 
