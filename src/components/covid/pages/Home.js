@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import {getRequest , Coutries ,convertArrayToArrOfObject} from '../Modules';
-import MediaCard from '../components/MediaCard'
+import MediaCard from '@covid/MediaCard'
 
   const Home = ({url}) => {
 

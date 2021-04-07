@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import TextField from '../inputs/Input';
 import Button from '../inputs/Button'
 import Box from '@material-ui/core/Box';
@@ -23,10 +23,10 @@ const Login = () => {
         validatePassword(password) ? setCredential({
             ...credential,
             password: password
-        }) : setCredential({...credential});
+        }) : setCredential({ ...credential });
     }
     const userNameHandler = username => {
-        setCredential({...credential, username: username})
+        setCredential({ ...credential, username: username })
     }
 
 
@@ -36,7 +36,7 @@ const Login = () => {
             if (request.ok) {
                 const response = await request.json();
                 validateUser(response[0]) ? setMessage(`Welcome ${response[0].name}`) : console.log("wrong info");
-                setCredential({...credential, username: '', password: ''})
+                setCredential({ ...credential, username: '', password: '' })
 
             }
 
@@ -83,11 +83,11 @@ const Login = () => {
                 <TextField onChange={event => {
                     userNameHandler(event.target.value)
                 }} mb={5} required label={'required'} type={'text'} display={'block'}
-                           fullWidth placeholder={credential.username}/>
+                    fullWidth placeholder={credential.username} />
                 <TextField onChange={(event) => {
                     passwordHandler(event.target.value)
                 }} required label={'reauired'} type={'password'} display={'block'}
-                           fullWidth placeholder={credential.password}/>
+                    fullWidth placeholder={credential.password} />
                 <Box>
                     <span>{valied ? "Password matches" : 'Password dont match'}</span>
 

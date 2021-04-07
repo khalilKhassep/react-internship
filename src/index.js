@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
+import App from './App';
 import Covid19  from './components/covid/Covid19'
 import reportWebVitals from './reportWebVitals';
+import Login from './components/Login/Login'
 
 ReactDOM.render(
   <React.StrictMode>
