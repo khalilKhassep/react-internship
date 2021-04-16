@@ -39,7 +39,6 @@ const Country = () => {
 
     const { id } = useParams()
     const classes = useStyles();
-    const [loading, setLoading] = useState(false);
     const [data, setData] = useState(countryData)
 
     console.log('before merging => ', data);

@@ -28,10 +28,10 @@ export async function getCountryData(country) {
 }
 export function convertArrayToArrOfObject(arr, _2d = true) { // create dynmic keys creation [Next level]
     if (isArr(arr)) {
-        let arrOfObj = new Array();
+        let arrOfObj = [];
 
         arr.forEach((element) => {
-            let obj = new Object()
+            let obj = {}
             obj.country = element[0];
             obj.code = element[1]
             arrOfObj.push(obj)

@@ -1,22 +1,25 @@
-import {useState,useEffect} from 'react';
-import { Container, formatMs } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import {makeStyles} from '@material-ui/core/styles';
 import Settings from './pages/Settings';
 import Home from './pages/Home';
 import Country from './pages/Country'
 
 import '../../App.css';
-const Covid19 = () => {
-  const [baseUrl , setBaseUrl] = useState('');
 
-  useEffect(() => {
-    setBaseUrl('https://api.covid19api.com/');
-  },[])
+const useStyles = makeStyles({
+  root:{},
+  fixMargin:{
+    marginTop:100
+  }
+})
+const Covid19 = () => {
+  const classes = useStyles();
   return (
-    <Container>
+    <Container className={classes.fixMargin}>
       <BrowserRouter>
-        <ul className={'menu'}>
-          <li className={'menu-item'}><Link to='/'>Home</Link></li>
+        <ul className={'menu-covid'}>
+          <li className={'menu-item'}><Link to='/covid'>Home</Link></li>
           <li className={'menu-item'}><Link to='/settings' >Settings</Link></li>
         </ul>
         <Switch>
@@ -26,7 +29,7 @@ const Covid19 = () => {
           <Route path={'/country/:id'}>
              <Country></Country>
           </Route>
-          <Route exact path={'/'}>
+          <Route exact path={'/covid'}>
             <Home />
           </Route>
         </Switch>
